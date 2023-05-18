@@ -1,0 +1,44 @@
+.acerca{
+    background-color: #ddd1c5;
+    max-width: 90%;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.parrafoAcerca{
+    font-size: 0.7rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.boxDatos{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+}
+
+.datos{
+    display: flex;
+    gap: 1rem;
+}
+
+.dato1{
+    border-right: 1px solid #dfdfdf;
+    padding-right: 2rem;
+}
+
+.icon{
+    width: 10vw;
+    height: 10vw;
+}
+
+.detalle{
+    font-size: 0.7rem;
+    margin: 0;
+}
+
+.dato{
+    font-weight: 700;
+    margin: 0;
+}

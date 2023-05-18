@@ -12,8 +12,7 @@ import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
 import Logo from './Logo.png'
-import Theme from '../../Providers/theme/Theme'
-import { ThemeProvider } from '@mui/material/styles'
+import './navbar.css'
 
 const pages = ['Inicio', 'Turnos', 'Productos']
 
@@ -29,29 +28,27 @@ const NavBar = () => {
   }
 
   return (
-    <ThemeProvider theme={Theme}>
-      <AppBar position='static' color='primary'>
-        <Container maxWidth='xl'>
-          <Toolbar disableGutters>
-            <img style={{ width: '200px', margin: '1em' }} src={Logo} alt='Logo Micaela Morales-Colorista' />
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-              <IconButton size='large' aria-label='account of current user' aria-controls='menu-appbar' aria-haspopup='true' onClick={handleOpenNav} color='inherit'>
-                <MenuIcon />
-              </IconButton>
-              <Menu id='menu-appbar' anchorEl={anchorNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'left' }} open={Boolean(anchorNav)} onClose={handleCloseNav} sx={{ display: { xs: 'block', md: 'none' } }}>
-                {pages.map((page) => {
-                  return (
-                    <MenuItem key={page} onClick={handleCloseNav}>
-                      {page}
-                    </MenuItem>
-                  )
-                })}
-              </Menu>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
-    </ThemeProvider>
+    <AppBar position='static' className='navbar'>
+      <Container maxWidth='xl'>
+        <Toolbar disableGutters>
+          <img className='logo' src={Logo} alt='Logo Micaela Morales-Colorista' />
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton size='large' aria-label='account of current user' aria-controls='menu-appbar' aria-haspopup='true' onClick={handleOpenNav} style={{ color: '#fff' }}>
+              <MenuIcon />
+            </IconButton>
+            <Menu id='menu-appbar' anchorEl={anchorNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'left' }} open={Boolean(anchorNav)} onClose={handleCloseNav} sx={{ display: { xs: 'block', md: 'none' } }}>
+              {pages.map((page) => {
+                return (
+                  <MenuItem key={page} onClick={handleCloseNav}>
+                    {page}
+                  </MenuItem>
+                )
+              })}
+            </Menu>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   )
 }
 
