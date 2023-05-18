@@ -1,5 +1,5 @@
 import { Box, Container } from '@mui/material'
-import imagenPortada from './imagenPortada.jpg'
+import imagenPortada from './ImagenPortada.jpg'
 import './portada.css'
 
 const Portada = () => {
