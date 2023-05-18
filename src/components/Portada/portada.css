@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
+
+.imagenPortada {
+    width: 100%; 
+    position: absolute; 
+    top: -10%; 
+    z-Index: -1;
+}
+
+.title{
+    font-family: 'Mrs Saint Delafield', cursive;
+    color: #bb9a63;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
