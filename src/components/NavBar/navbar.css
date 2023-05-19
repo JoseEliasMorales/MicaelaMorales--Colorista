@@ -11,4 +11,20 @@
     .navbar{
         background-color: #00000080;
     }
+    
+    .logo{
+        width: 125px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .logo{
+        width: 156px;
+    }
+}
+
+@media screen and (min-width:1536px) {
+    .logo{
+        width: 195px;
+    }
 }

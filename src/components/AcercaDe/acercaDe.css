@@ -1,21 +1,42 @@
-.acerca{
-    background-color: #ddd1c5;
+.boxImagenes{
+    flex-direction: column;
+    height: 240px;
+    max-width: 350px;
+}
+
+.img1, .img2 {
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+        position: absolute;
+        width: 136px;
+        height: 204px;
+}
+
+.img1{
+    top: 0;
+    left: 30px;
+    rotate: -5deg;
+}
+
+.img2{
+    bottom: 0;
+    right: 30px;
+    rotate: 5deg;
+}
+
+.boxDetalles{
     max-width: 90%;
     margin: auto;
-    padding: 1rem;
-    text-align: center;
 }
 
 .parrafoAcerca{
     font-size: 0.7rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #dfdfdf;
-}
-
-.boxDatos{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 1rem;
 }
 
 .datos{
@@ -29,8 +50,8 @@
 }
 
 .icon{
-    width: 10vw;
-    height: 10vw;
+    width: 30px;
+    height: 30px;
 }
 
 .detalle{
@@ -41,4 +62,132 @@
 .dato{
     font-weight: 700;
     margin: 0;
+}
+
+@media screen and (min-width:768px) {
+    .contenedorAcerca{
+        display: flex;
+    }
+
+    .boxDetalles{
+        max-width: 50%;
+        margin: auto 1rem auto 1rem;
+    }
+
+    .boxImagenes{
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .img1, .img2{
+        position: inherit;
+        rotate: 0deg;
+    }
+
+    .img1{
+        margin-bottom: 2rem;
+        left: 0;
+    }
+
+    .img2{
+        margin-top: 2rem;
+        right: 0;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .contenedorAcerca{
+        position: relative;
+        top: -100px;
+    }
+
+    .boxImagenes{
+        height: 276px;
+        max-width: 403px;
+    }
+
+    .img1, .img2{
+        width: 156px;
+        height: 235px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contenedorAcerca{
+        margin-top:2rem ;
+    }
+    .img1, .img2{
+        width: 180px;
+        height: 270px;
+    }
+
+    .title--acerca{
+        padding: 0.5rem;
+    }
+
+    
+
+    .parrafoAcerca{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    .detalle{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .img1, .img2{
+        width: 207px;
+        height: 310px;
+    }
+
+    .title--acerca{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width:1536px) {
+
+    .contenedorAcerca{
+        margin-top: 7rem;
+        gap: 5rem;
+        max-width: 90%;
+    }
+
+    .img1, .img2{
+        width: 298px;
+        height: 446px;
+    }
+
+    .title--acerca{
+        font-size: 5rem;
+    }
+
+    .subtitle--acerca{
+        font-size: 2rem;
+    }
+
+    .parrafoAcerca{
+        font-size: 1.2rem;
+    }
+
+    .detalle{
+        font-size: 1.2rem;
+    }
+
+    .icon{
+        width: 50px;
+        height: 50px;
+    }
+
+    .dato{
+        font-size: 2rem;
+    }
 }

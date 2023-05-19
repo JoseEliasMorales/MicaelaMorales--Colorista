@@ -3,7 +3,7 @@
 .title{
     font-family: 'Mrs Saint Delafield', cursive;
     color: #bb9a63;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     line-height: 1.2;
     font-weight: 400;
 }
@@ -30,8 +30,52 @@
 }
 
 
+@media screen and (min-width:768px){
+    .title{
+        font-size: 3rem;
+    }
+    .subTitle{
+        font-size: 1.5rem;
+    }
+
+    .trabajos{
+        font-size: 1rem;
+    }
+
+    .boton{
+        font-size: 1rem;
+    }
+}
+
 @media screen and (min-width:900px){
     .boxPortada{
         top:-100px
+    }
+
+    .contenedorPortada{
+        left: 5%;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .contenedorPortada{
+        left: 10%;
+    }
+
+    .title{
+        font-size: 5rem;
+    }
+
+    .subTitle{
+        font-size: 2rem;
+    }
+
+    .trabajos{
+        font-size: 1.5rem;
+    }
+
+    .boton{
+        margin-top: 2rem;
+        font-size: 1.3rem;
     }
 }
