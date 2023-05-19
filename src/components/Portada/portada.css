@@ -53,13 +53,13 @@
     }
 
     .contenedorPortada{
-        left: 5%;
+        padding-left: 5%;
     }
 }
 
 @media screen and (min-width:1200px){
     .contenedorPortada{
-        left: 10%;
+        padding-left: 10%;
     }
 
     .title{
