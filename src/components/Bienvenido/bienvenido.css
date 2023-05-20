@@ -1,0 +1,61 @@
+.boxCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    top:-10px
+}
+
+.card{
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.cardMedia{
+    height: 200px;
+    object-fit: cover;
+}
+
+@media screen and (min-width:768px) {
+    
+}
+
+@media screen and (min-width:900px) {
+    .boxBienvenido{
+        position: relative;
+        top: -100px;
+    }
+
+    .card{
+        width: 188px;
+    }
+
+    .cardMedia{
+        height: 250px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    
+}
+
+@media screen and (min-width:1200px) {
+    .boxBienvenido{
+        top: -50px;
+    }
+
+    .card{
+        width: 235px;
+    }
+
+    .cardMedia{
+        height: 313px;
+    }
+}
+
+@media screen and (min-width:1536px) {
+    
+}
