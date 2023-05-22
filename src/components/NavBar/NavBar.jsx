@@ -29,7 +29,7 @@ const NavBar = () => {
   }
 
   return (
-    <AppBar position='static' className='navbar'>
+    <AppBar position='relative' className='navbar'>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <Link to='/'>

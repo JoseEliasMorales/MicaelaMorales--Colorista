@@ -7,14 +7,16 @@ import Presupuesto from './src/components/Presupuesto/Presupuesto'
 
 export function App () {
   return (
-    <StyledEngineProvider injectFirst>
+    <>
       <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/presupuesto' element={<Presupuesto />} />
-        </Routes>
+        <StyledEngineProvider injectFirst>
+          <NavBar />
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route path='/presupuesto' element={<Presupuesto />} />
+          </Routes>
+        </StyledEngineProvider>
       </BrowserRouter>
-    </StyledEngineProvider>
+    </>
   )
 }
