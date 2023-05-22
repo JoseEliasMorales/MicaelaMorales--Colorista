@@ -13,6 +13,7 @@ import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
 import Logo from './Logo.png'
 import './navbar.css'
+import { Link } from 'react-router-dom'
 
 const pages = ['Inicio', 'Turnos', 'Productos']
 
@@ -31,8 +32,10 @@ const NavBar = () => {
     <AppBar position='static' className='navbar'>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
-          <img className='logo' src={Logo} alt='Logo Micaela Morales-Colorista' />
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Link to='/'>
+            <img className='logo' src={Logo} alt='Logo Micaela Morales-Colorista' />
+          </Link>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'end' }}>
             <IconButton size='large' aria-label='account of current user' aria-controls='menu-appbar' aria-haspopup='true' onClick={handleOpenNav} style={{ color: '#fff' }}>
               <MenuIcon />
             </IconButton>

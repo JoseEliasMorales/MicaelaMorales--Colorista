@@ -1,16 +1,20 @@
 import NavBar from './src/components/NavBar/NavBar'
-import Portada from './src/components/Portada/Portada'
+import Home from './src/components/Home/Home'
 import { StyledEngineProvider } from '@mui/material/styles'
 import './App.css'
-import AcercaDe from './src/components/AcercaDe/AcercaDe'
-import Bienvenido from './src/components/Bienvenido/Bienvenido'
+import { Route, BrowserRouter, Routes } from 'react-router-dom'
+import Presupuesto from './src/components/Presupuesto/Presupuesto'
+
 export function App () {
   return (
     <StyledEngineProvider injectFirst>
-      <NavBar />
-      <Portada />
-      <AcercaDe />
-      <Bienvenido />
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/presupuesto' element={<Presupuesto />} />
+        </Routes>
+      </BrowserRouter>
     </StyledEngineProvider>
   )
 }

@@ -57,5 +57,11 @@
 }
 
 @media screen and (min-width:1536px) {
-    
+    .card{
+        width: 270px;
+    }
+
+    .cardMedia{
+        height: 360px;
+    }
 }
