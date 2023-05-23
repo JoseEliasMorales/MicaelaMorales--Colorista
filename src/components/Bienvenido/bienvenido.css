@@ -9,18 +9,38 @@
 }
 
 .card{
-    width: 150px;
+    max-width: 90%;
+    min-width: 50%;
+    max-height: 208px;
     text-align: center;
     padding: 5px;
+    margin-bottom:2rem;
 }
 
 .cardMedia{
+    width: 33%;
     height: 200px;
     object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.parrafoCard{
+    font-size: 0.8rem;
+    margin: 0.5rem;
+    color: rgb(103, 113, 139);
+}
+
+.logoCard{
+    width: 40px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 @media screen and (min-width:768px) {
-    
+    .card{
+        max-width: 50%;
+    }
 }
 
 @media screen and (min-width:900px) {
@@ -30,11 +50,12 @@
     }
 
     .card{
-        width: 188px;
+        max-width: 45%;
+        min-width: 45%;
     }
 
-    .cardMedia{
-        height: 250px;
+    .logoCard{
+        width: 50px;
     }
 }
 
@@ -47,21 +68,26 @@
         top: -50px;
     }
 
-    .card{
-        width: 235px;
+    .title--card{
+        font-size: 3rem;
     }
 
-    .cardMedia{
-        height: 313px;
+    .logoCard{
+        width: 60px;
     }
 }
 
 @media screen and (min-width:1536px) {
     .card{
-        width: 270px;
+        max-width: 33%;
+        min-width: 33%;
+    }
+    
+    .boxCards{
+        gap: 3rem;
     }
 
-    .cardMedia{
-        height: 360px;
+    .logoCard{
+        width: 80px;
     }
 }

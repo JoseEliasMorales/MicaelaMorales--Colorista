@@ -1,6 +1,7 @@
 import { Box, Card, CardContent, CardMedia, Container } from '@mui/material'
 import './bienvenido.css'
 import { estilos } from '../../config/async'
+import logo from './Logo2.png'
 
 const Bienvenido = () => {
   return (
@@ -14,13 +15,15 @@ const Bienvenido = () => {
         {
             estilos.map(estilo => {
               return (
-                <Card key={estilo.id} className='card'>
-                  <CardMedia component='img' alt={`estilo ${estilo.estilo}`} image={estilo.img} className='cardMedia' />
+                <Card key={estilo.id} className='card' style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <CardContent style={{ padding: '10px' }}>
-                    <Box component='div'>
-                      <h4>{estilo.estilo}</h4>
+                    <Box component='div' position='relative' height='100%'>
+                      <h4 className='title title--card'>{estilo.estilo}</h4>
+                      <p className='parrafoCard'>{estilo.descripcion}</p>
+                      <img src={logo} alt=' ' className='logoCard' />
                     </Box>
                   </CardContent>
+                  <CardMedia component='img' alt={`estilo ${estilo.estilo}`} image={estilo.img} className='cardMedia' />
                 </Card>
               )
             })
