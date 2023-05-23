@@ -6,6 +6,7 @@ import sobre from './sobre.png'
 import pelolargo from './pelolargo.png'
 import './estilos.css'
 import Cantidad from '../Cantidad/Cantidad'
+
 const Estilos = () => {
   const [largo, setLargo] = useState('')
 

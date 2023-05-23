@@ -2,8 +2,9 @@ import { FormControl, InputLabel, MenuItem, Select } from '@mui/material'
 import { useState } from 'react'
 import Estilos from '../Estilos/Estilos'
 
-const AgregarServicio = () => {
+const AgregarServicio = ({ estilo }) => {
   const [servicio, setServicio] = useState('')
+  console.log(estilo)
 
   const handleChange = (event) => {
     event.preventDefault()

@@ -2,18 +2,30 @@ import React, { useEffect, useState } from 'react'
 import Box from '@mui/material/Box'
 import './presupuesto.css'
 import { Button, Container, FormControl, InputLabel, MenuItem, Select } from '@mui/material'
-import pelo from './pelomujer.jpg'
+import loader from './loader.svg'
 import Estilos from '../Estilos/Estilos'
 import AgregarServicio from '../AgregarServicio/AgregarServicio'
+import { formatearPeso } from '../../config/async'
 
 const Presupuesto = () => {
   const [estilo, setEstilo] = useState('')
   const [agregar, setAgregar] = useState(false)
-  console.log(estilo)
+  const [total, setTotal] = useState(null)
 
   const handleChange = (event) => {
     event.preventDefault()
     setEstilo(event.target.value)
+  }
+
+  useEffect(() => {
+    setAgregar(false)
+  }, [estilo])
+
+  const Calcular = () => {
+    setTotal(0)
+    setTimeout(() => {
+      setTotal(formatearPeso.format(estilo))
+    }, [2000])
   }
 
   return (
@@ -44,7 +56,7 @@ const Presupuesto = () => {
         </FormControl>
         {
             estilo && estilo < 5 && agregar === false
-              ? <><Button variant='text' onClick={() => setAgregar(true)}>Agregar Servicio</Button><Button variant='text'>Calcular</Button></>
+              ? <><Button variant='text' onClick={() => setAgregar(true)}>Agregar Servicio</Button><Button variant='text' onClick={Calcular}>Calcular</Button></>
               : undefined
         }
         {
@@ -54,8 +66,18 @@ const Presupuesto = () => {
         }
         {
             agregar
-              ? <AgregarServicio />
+              ? <AgregarServicio estilo={estilo} />
               : false
+        }
+        {
+          total === 0
+            ? <Container style={{ width: '100%', display: 'flex', justifyContent: 'center' }}><img src={loader} alt='' /></Container>
+            : null
+        }
+        {
+          total
+            ? <p>{total}</p>
+            : null
         }
       </Container>
     </>
