@@ -1,9 +1,9 @@
-export const estilos = [
+/* export const estilos = [
   {
     id: 1,
     estilo: 'Balayage',
     img: '../bala.jpg',
-    descripcion: ' Aplica coloración a la totalidad de la melena, a partir de unos centímetros de la raíz hasta las puntas, con un degradado progresivo y sutil.'
+    descripcion: 'Aplica coloración a la totalidad de la melena, a partir de unos centímetros de la raíz hasta las puntas, con un degradado progresivo y sutil.'
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const estilos = [
     img: '../mechas.jpg',
     descripcion: 'Aplica un color a tus mechones, generalmente mas claros que el color del cabello.'
   }
-]
+] */
 
 export const formatearPeso = new Intl.NumberFormat('es-AR', {
   style: 'currency',
