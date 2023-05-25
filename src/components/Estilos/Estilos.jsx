@@ -26,10 +26,10 @@ const Estilos = () => {
           onChange={handleChange}
           className='name'
         >
-          <MenuItem className='name' value={1}><img src={corto} alt='icono cabello corto' style={{ margin: '1rem' }} />Corto</MenuItem>
-          <MenuItem className='name' value={2}><img src={sobre} alt='icono cabello sobre los hombros' style={{ margin: '1rem' }} />Sobre los hombros</MenuItem>
-          <MenuItem className='name' value={3}><img src={debajo} alt='icono cabello debajo de los hombros' style={{ margin: '1rem' }} />Debajo de los hombros</MenuItem>
-          <MenuItem className='name' value={4}><img src={pelolargo} alt='icono cabello largo' style={{ margin: '1rem' }} />Media espalda</MenuItem>
+          <MenuItem className='name' value={1}><img src={corto} alt='icono cabello corto' />Corto</MenuItem>
+          <MenuItem className='name' value={2}><img src={sobre} alt='icono cabello sobre los hombros' />Sobre los hombros</MenuItem>
+          <MenuItem className='name' value={3}><img src={debajo} alt='icono cabello debajo de los hombros' />Debajo de los hombros</MenuItem>
+          <MenuItem className='name' value={4}><img src={pelolargo} alt='icono cabello largo' />Media espalda</MenuItem>
         </Select>
       </FormControl>
       {
