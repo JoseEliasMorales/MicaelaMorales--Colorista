@@ -4,6 +4,7 @@ import { StyledEngineProvider } from '@mui/material/styles'
 import './App.css'
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import Presupuesto from './src/components/Presupuesto/Presupuesto'
+import Turnos from './src/components/Turnos/Turnos'
 
 export function App () {
   return (
@@ -14,6 +15,7 @@ export function App () {
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route path='/presupuesto' element={<Presupuesto />} />
+            <Route path='/turnos' element={<Turnos />} />
           </Routes>
         </StyledEngineProvider>
       </BrowserRouter>

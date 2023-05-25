@@ -1,9 +1,22 @@
 import { Box, Card, CardContent, CardMedia, Container } from '@mui/material'
 import './bienvenido.css'
-import { estilos } from '../../config/async'
 import logo from './Logo2.png'
+import { useState, useEffect } from 'react'
+import { getDocs, collection, query, where } from '@firebase/firestore'
+import { db } from '../../services/firebase/config'
 
 const Bienvenido = () => {
+  const [estilos, setEstilos] = useState([])
+
+  useEffect(() => {
+    const misEstilos = collection(db, 'estilos')
+
+    getDocs(misEstilos)
+      .then((respuesta) => {
+        setEstilos(respuesta.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+      })
+  }, [])
+
   return (
     <Box className='boxBienvenido'>
       <Container style={{ padding: '1rem', position: 'relative', backgroundColor: '#ddd1c5', textAlign: 'center', marginTop: '1rem', minWidth: '100%' }}>
